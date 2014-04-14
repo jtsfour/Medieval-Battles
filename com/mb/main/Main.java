@@ -105,11 +105,27 @@ public class Main
 	    GameRegistry.registerItem(blackspade,"blackspade");
 	    GameRegistry.registerItem(blackaxe,"blackaxe");
 	    //ItemStacks
-	    ItemStack redironstack = new ItemStack(rediron,3);
+	    ItemStack redironstack = new ItemStack(this.rediron,3);
 	    ItemStack redstoneblockstack = new ItemStack(Blocks.redstone_block,1);
 	    ItemStack redstonestack = new ItemStack(Items.redstone,1);
 	    ItemStack ironstack = new ItemStack(Items.iron_ingot,3);
+	    ItemStack stickstack = new ItemStack(Items.stick,1);
+	    ItemStack redpickstack = new ItemStack(this.redpick,1);
+	    ItemStack redswordstack = new ItemStack(this.redsword,1);
+	    ItemStack redspadestack = new ItemStack(this.redspade,1);
+	    ItemStack redaxestack = new ItemStack(this.redaxe,1);
+	    ItemStack blueironstack = new ItemStack(this.blueiron,3);
+	   // ItemStack bluesword = new ItemStack
 	    //Crafting Recipes
-	//GameRegistry.addRecipe();
+	//rediron
+	GameRegistry.addRecipe(redironstack,"zyz","xxx","zyz",'z',redstonestack,'y',redstoneblockstack,'x',ironstack);
+	GameRegistry.addRecipe(redpickstack,"xxx"," z "," z ",'x',redironstack,'z',stickstack);
+	GameRegistry.addRecipe(redswordstack," x "," x "," z ",'x',redironstack,'z',stickstack);
+	GameRegistry.addRecipe(redspadestack," x "," z "," z ",'x',redironstack,'z',stickstack);
+	GameRegistry.addRecipe(redaxestack," xx"," zx"," z ",'x',redironstack,'z',stickstack);
+	GameRegistry.addRecipe(redaxestack," xx","xz "," z ",'x',redironstack,'z',stickstack);
+	//blueiron
+	GameRegistry.addRecipe(redironstack,"zyz","xxx","zyz",'z',redstonestack,'y',redstoneblockstack,'x',ironstack);
+	
     }
 }
