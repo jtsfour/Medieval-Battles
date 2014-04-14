@@ -1,7 +1,15 @@
 package com.mb.main;
 
+import com.mb.items.blackaxe;
 import com.mb.items.blackiron;
+import com.mb.items.blackpick;
+import com.mb.items.blackspade;
+import com.mb.items.blacksword;
+import com.mb.items.blueaxe;
 import com.mb.items.blueiron;
+import com.mb.items.bluepick;
+import com.mb.items.bluespade;
+import com.mb.items.bluesword;
 import com.mb.items.redaxe;
 import com.mb.items.rediron;
 import com.mb.items.redpick;
@@ -13,6 +21,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -62,15 +71,22 @@ public class Main
     public void preInit(FMLPreInitializationEvent event)
     {
 		//Items
-    	rediron = new rediron().setUnlocalizedName("rediron").setCreativeTab(this.mbtab).setTextureName("mb:redingot");
-		blueiron = new blueiron().setUnlocalizedName("blueiron").setCreativeTab(this.mbtab).setTextureName("mb:blueingot");
-		blackiron = new blackiron().setUnlocalizedName("blackiron").setCreativeTab(this.mbtab).setTextureName("mb:blackingot");
+    	rediron = new rediron().setUnlocalizedName("rediron").setCreativeTab(this.mbtab).setTextureName("mb:redingot2");
+		blueiron = new blueiron().setUnlocalizedName("blueiron").setCreativeTab(this.mbtab).setTextureName("mb:blueingot2");
+		blackiron = new blackiron().setUnlocalizedName("blackiron").setCreativeTab(this.mbtab).setTextureName("mb:blackingot2");
 		sstick = new sstick().setUnlocalizedName("sstick").setCreativeTab(this.mbtab).setTextureName("mb:sstick");
 		redsword = new redsword(redironm).setUnlocalizedName("redsword").setCreativeTab(this.mbtab).setTextureName("mb:redsword");
 		redpick = new redpick(redironm).setUnlocalizedName("redpick").setCreativeTab(this.mbtab).setTextureName("mb:redpick");
 		redspade = new redspade(redironm).setUnlocalizedName("redspade").setCreativeTab(this.mbtab).setTextureName("mb:redspade");
 		redaxe = new redaxe(redironm).setUnlocalizedName("redaxe").setCreativeTab(this.mbtab).setTextureName("mb:redaxe");
-		
+		bluesword = new bluesword(blueironm).setUnlocalizedName("bluesword").setCreativeTab(this.mbtab).setTextureName("mb:bluesword");
+		bluepick = new bluepick(blueironm).setUnlocalizedName("bluepick").setCreativeTab(this.mbtab).setTextureName("mb:bluepick");
+		bluespade = new bluespade(blueironm).setUnlocalizedName("bluespade").setCreativeTab(this.mbtab).setTextureName("mb:bluespade");
+		blueaxe = new blueaxe(blueironm).setUnlocalizedName("blueaxe").setCreativeTab(this.mbtab).setTextureName("mb:blueaxe");
+		blacksword = new blacksword(blackironm).setUnlocalizedName("blacksword").setCreativeTab(this.mbtab).setTextureName("mb:blacksword");
+		blackpick = new blackpick(blackironm).setUnlocalizedName("blackpick").setCreativeTab(this.mbtab).setTextureName("mb:blackpick");
+		blackspade = new blackspade(blackironm).setUnlocalizedName("blackspade").setCreativeTab(this.mbtab).setTextureName("mb:blackspade");
+		blackaxe = new blackaxe(blackironm).setUnlocalizedName("blackaxe").setCreativeTab(this.mbtab).setTextureName("mb:blackaxe");
 		//ItemRegistry
 		GameRegistry.registerItem(rediron,"rediron");
 		GameRegistry.registerItem(blackiron,"blackiron");
@@ -80,7 +96,20 @@ public class Main
 		GameRegistry.registerItem(redpick,"redpick");
 		GameRegistry.registerItem(redspade,"redspade");
 		GameRegistry.registerItem(redaxe,"redaxe");
-	    
-		
+	    GameRegistry.registerItem(bluesword, "bluesword");
+	    GameRegistry.registerItem(bluepick, "bluepick");
+	    GameRegistry.registerItem(bluespade, "bluespade");
+	    GameRegistry.registerItem(blueaxe, "blueaxe");
+	    GameRegistry.registerItem(blacksword,"blacksword");
+	    GameRegistry.registerItem(blackpick,"blackpick");
+	    GameRegistry.registerItem(blackspade,"blackspade");
+	    GameRegistry.registerItem(blackaxe,"blackaxe");
+	    //ItemStacks
+	    ItemStack redironstack = new ItemStack(rediron,3);
+	    ItemStack redstoneblockstack = new ItemStack(Blocks.redstone_block,1);
+	    ItemStack redstonestack = new ItemStack(Items.redstone,1);
+	    ItemStack ironstack = new ItemStack(Items.iron_ingot,3);
+	    //Crafting Recipes
+	//GameRegistry.addRecipe();
     }
 }
