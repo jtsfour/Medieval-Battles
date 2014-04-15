@@ -115,7 +115,18 @@ public class Main
 	    ItemStack redspadestack = new ItemStack(this.redspade,1);
 	    ItemStack redaxestack = new ItemStack(this.redaxe,1);
 	    ItemStack blueironstack = new ItemStack(this.blueiron,3);
-	   // ItemStack bluesword = new ItemStack
+	    ItemStack lapisstack = new ItemStack(Items.dye,1,4);
+	    ItemStack lapisblockstack = new ItemStack(Blocks.lapis_block,1);
+	    ItemStack blueswordstack = new ItemStack(this.bluesword,1);
+	    ItemStack bluepickstack = new ItemStack(this.bluepick,1);
+	    ItemStack bluespadestack = new ItemStack(this.bluespade,1);
+	    ItemStack blueaxestack = new ItemStack(this.blueaxe,1);
+	    ItemStack coalstack = new ItemStack(Items.coal,1);
+	    ItemStack blackswordstack = new ItemStack(this.blacksword,1);
+	    ItemStack blackpickstack = new ItemStack(this.blackpick,1);
+	    ItemStack blackspadestack = new ItemStack(this.blackspade,1);
+	    ItemStack blackaxestack = new ItemStack(this.blackaxe,1);
+	    ItemStack blackironstack = new ItemStack(this.blackiron,3);
 	    //Crafting Recipes
 	//rediron
 	GameRegistry.addRecipe(redironstack,"zyz","xxx","zyz",'z',redstonestack,'y',redstoneblockstack,'x',ironstack);
@@ -125,7 +136,18 @@ public class Main
 	GameRegistry.addRecipe(redaxestack," xx"," zx"," z ",'x',redironstack,'z',stickstack);
 	GameRegistry.addRecipe(redaxestack," xx","xz "," z ",'x',redironstack,'z',stickstack);
 	//blueiron
-	GameRegistry.addRecipe(redironstack,"zyz","xxx","zyz",'z',redstonestack,'y',redstoneblockstack,'x',ironstack);
-	
+	GameRegistry.addRecipe(blueironstack,"zyz","xxx","zyz",'z',lapisstack,'y',lapisblockstack,'x',ironstack);
+	GameRegistry.addRecipe(blueswordstack," x "," x "," z ",'x',blueironstack,'z',stickstack);
+	GameRegistry.addRecipe(bluepickstack,"xxx"," z "," z ",'x',blueironstack,'z',stickstack);
+	GameRegistry.addRecipe(bluespadestack," x "," z "," z ",'x',blueironstack,'z',stickstack);
+	GameRegistry.addRecipe(blueaxestack," xx"," zx"," z ",'x',blueironstack,'z',stickstack);
+	GameRegistry.addRecipe(blueaxestack," xx","xz "," z ",'x',blueironstack,'z',stickstack);
+	//blackiron
+	GameRegistry.addRecipe(blackironstack,"zzz","xxx","zzz",'z',coalstack,'x',ironstack);
+	GameRegistry.addRecipe(blackswordstack," x "," x "," z ",'x',blackironstack,'z',stickstack);
+	GameRegistry.addRecipe(blackpickstack,"xxx"," z "," z ",'x',blackironstack,'z',stickstack);
+	GameRegistry.addRecipe(blackspadestack," x "," z "," z ",'x',blackironstack,'z',stickstack);
+	GameRegistry.addRecipe(blackaxestack," xx"," zx"," z ",'x',blackironstack,'z',stickstack);
+	GameRegistry.addRecipe(blackaxestack," xx","xz "," z ",'x',blackironstack,'z',stickstack);
     }
 }
